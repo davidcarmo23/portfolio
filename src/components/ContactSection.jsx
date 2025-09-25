@@ -57,7 +57,7 @@ export const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-medium"> Location</h4>
-                                    <a className="text-muted-foreground hover:text-secondary-icon transition-colors">
+                                    <a href="https://maps.app.goo.gl/J6JdYsA3nuPGbmyFA" className="text-muted-foreground hover:text-secondary-icon transition-colors">
                                         Guarda, Portugal
                                     </a>
                                 </div>
