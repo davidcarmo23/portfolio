@@ -25,7 +25,7 @@ export const AboutSection = () =>{
                                 Get in Touch
                             </a>
 
-                            <a href="#cv" className="cosmic-button">
+                            <a download="DavidCarmo_CurriculumVitaeEN" href="/DavidCarmo_CurriculumVitaeEN.pdf" className="cosmic-button">
                                 Download CV
                             </a>
                         </div>
