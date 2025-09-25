@@ -29,7 +29,7 @@ export const NavBar = () =>{
             <div className="container flex items-center justify-between">
                 <a className="text-xl font-bold text-primary flex items-center" href= "#hero">
                     <span className="relative z-10">
-                        <img src="/public/logos/davidcarmologo.png"
+                        <img src="/logos/davidcarmologo.png"
                             className="w-30" />
                     </span>
                 </a>
