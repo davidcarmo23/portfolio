@@ -67,10 +67,10 @@ export const ContactSection = () => {
                         <div className="pt-8">
                             <h4> Connect With Me</h4>
                             <div className="flex space-x-4 justify-center mt-2">
-                                <a href="https://www.linkedin.com/in/david-carmo-a86025167/" target="_blank">
+                                <a aria-label="LinkedIn Link" href="https://www.linkedin.com/in/david-carmo-a86025167/" target="_blank">
                                     <Linkedin className="text-foreground/80 hover:text-secondary-icon transition-colors duration-300" />
                                 </a>
-                                <a href="https://www.instagram.com/david_carmo_23/" target="_blank">
+                                <a aria-label="Instagram Link" href="https://www.instagram.com/david_carmo_23/" target="_blank">
                                     <Instagram className="text-foreground/80 hover:text-secondary-icon transition-colors duration-300" />
                                 </a>
                             </div>
