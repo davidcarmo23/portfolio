@@ -8,27 +8,27 @@ const skills = [
   { name: "Tailwind CSS", level: 60, category: "frontend" },
   { name: "MUI", level: 60, category: "frontend" },
 
+  { name: "PHP", level: 80, category: "backend" },
   { name: "Django", level: 75, category: "backend" },
   { name: "Node.js", level: 70, category: "backend" },
-  { name: "Express", level: 60, category: "backend" },
-  { name: "MongoDB", level: 65, category: "backend" },
-  { name: "Firebase", level: 60, category: "backend" },
   { name: "PostgreSQL", level: 70, category: "backend" },
-  { name: "PHP", level: 80, category: "backend" },
   { name: "Java", level: 65, category: "backend" },
+  { name: "MongoDB", level: 65, category: "backend" },
+  { name: "Express", level: 60, category: "backend" },
+  { name: "Firebase", level: 60, category: "backend" },
 
-  { name: "Git/Github", level: 80, category: "tools" },
   { name: "VSCode", level: 95, category: "tools" },
+  { name: "Git/Github", level: 80, category: "tools" },
   { name: "Postman", level: 70, category: "tools" },
-  { name: "PyCharm", level: 65, category: "tools" },
-  { name: "Docker", level: 50, category: "tools" },
   { name: "DBeaver", level: 70, category: "tools" },
+  { name: "PyCharm", level: 65, category: "tools" },
   { name: "Trello", level: 55, category: "tools" },
+  { name: "Docker", level: 50, category: "tools" },
 ]
 
 const categories = ["all", "frontend", "backend", "tools"]
 
-export const SkillsSection = () => {
+export const SkillsSection = ({ t }) => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
@@ -53,7 +53,7 @@ export const SkillsSection = () => {
                   : "bg-seconday/70 text-foreground hover:bg-secondary"
               )}
             >
-              {category}
+              {t(category)}
             </button>
           ))}
         </div>

@@ -6,24 +6,29 @@ import { NavBar } from "../components/NavBar";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { SkillsSection } from "../components/SkillsSection";
 import { StarBackground } from "../components/StarBackground";
-import { ThemeToggle } from "../components/ThemeToggle"
+
+import '../i18n'
+import { useTranslation } from "react-i18next";
+
 
 export const Home = () => {
+    const { t, i18n } = useTranslation();
+
     return (
-        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <div id="home" className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
             {/* // Background effects */}
             <StarBackground />
 
             {/* // Navbar */}
-            <NavBar />
+            <NavBar t={t} />
             {/* // Main Content */}
             <main>
-                <HeroSection />
-                <AboutSection />
-                <SkillsSection />
-                <ProjectsSection />
-                <ContactSection />
+                <HeroSection t={t} />
+                <AboutSection t={t} />
+                <SkillsSection t={t} />
+                <ProjectsSection t={t} />
+                <ContactSection t={t} />
             </main>
 
 

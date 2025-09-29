@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "home", href: "#home" },
+    { name: "about", href: "#about" },
+    { name: "skills", href: "#skills" },
+    { name: "projects", href: "#projects" },
+    { name: "contact", href: "#contact" },
 ]
-export const NavBar = () => {
+export const NavBar = ({ t }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -39,7 +39,7 @@ export const NavBar = () => {
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => (
                         <a key={key} href={item.href} className="text-foreground/80 hover:text-secondary-icon transition-colors duration-300">
-                            {item.name}
+                            {t(item.name)}
                         </a>
                     ))}
 
@@ -63,7 +63,7 @@ export const NavBar = () => {
                     <div className="flex flex-col space-y-8 text-xl">
                         {navItems.map((item, key) => (
                             <a key={key} href={item.href} className="text-foreground/80 hover:text-secondary-icon transition-colors duration-300" onClick={() => setIsMenuOpen(false)}>
-                                {item.name}
+                                {t(item.name)}
                             </a>
                         ))}
                     </div>

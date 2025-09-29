@@ -1,26 +1,25 @@
 import { Instagram, Linkedin, MailIcon, MapPin, PhoneIcon, SendIcon } from "lucide-react";
 // import { cn } from "@/lib/utils";
 
-export const ContactSection = () => {
+export const ContactSection = ({ t }) => {
 
     return (
         <section id="contact" className="py-23 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-                    Get In
+                    {t("get_in")}
                     <span className="text-primary">
-                        {" "}Touch
+                        {" "}{t("touch")}
                     </span>
                 </h2>
 
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                    Have a project in mind or want to collaborate? Feel free to contact me.
-                    Currently open to discuss new opportunities.
+                    {t("get_in_touch_txt")}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-12">
                     <div className="space-y-8">
-                        <h3 className="text-2xl font-semibold mb-6"> Contact Information</h3>
+                        <h3 className="text-2xl font-semibold mb-6"> {t("contact_info")}</h3>
 
                         <div className="space-y-6 justify-center">
                             <div className="flex items-start space-x-4">
@@ -28,8 +27,8 @@ export const ContactSection = () => {
                                     <MailIcon className="h-6 w-6 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="font-medium"> Email</h4>
-                                    <a href="mailto:davidcarmo2000@gmail.com" className="text-muted-foreground hover:text-secondary-icon transition-colors">
+                                    <h4 className="font-medium"> {t("email")}</h4>
+                                    <a href="mailto:davidcarmo2000@gmail.com" target="_blank" className="text-muted-foreground hover:text-secondary-icon transition-colors">
                                         davidcarmo2000@gmail.com
                                     </a>
                                 </div>
@@ -42,8 +41,8 @@ export const ContactSection = () => {
                                     <PhoneIcon className="h-6 w-6 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="font-medium"> Phone</h4>
-                                    <a href="tel:+351961752990 " className="text-muted-foreground hover:text-secondary-icon transition-colors">
+                                    <h4 className="font-medium"> {t("phone")}</h4>
+                                    <a href="tel:+351961752990" target="_blank" className="text-muted-foreground hover:text-secondary-icon transition-colors">
                                         (+351) 961752990
                                     </a>
                                 </div>
@@ -56,8 +55,8 @@ export const ContactSection = () => {
                                     <MapPin className="h-6 w-6 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="font-medium"> Location</h4>
-                                    <a href="https://maps.app.goo.gl/J6JdYsA3nuPGbmyFA" className="text-muted-foreground hover:text-secondary-icon transition-colors">
+                                    <h4 className="font-medium"> {t("location")}</h4>
+                                    <a href="https://maps.app.goo.gl/J6JdYsA3nuPGbmyFA" target="_blank" className="text-muted-foreground hover:text-secondary-icon transition-colors">
                                         Guarda, Portugal
                                     </a>
                                 </div>
@@ -65,7 +64,7 @@ export const ContactSection = () => {
                         </div>
 
                         <div className="pt-8">
-                            <h4> Connect With Me</h4>
+                            <h4> {t("connect_with_me")}</h4>
                             <div className="flex space-x-4 justify-center mt-2">
                                 <a aria-label="LinkedIn Link" href="https://www.linkedin.com/in/david-carmo-a86025167/" target="_blank">
                                     <Linkedin className="text-foreground/80 hover:text-secondary-icon transition-colors duration-300" />

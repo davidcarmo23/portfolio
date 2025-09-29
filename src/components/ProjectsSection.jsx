@@ -7,11 +7,11 @@ const projects = [
         description: "",
         image: "/projects/fiscotrack.png",
         tags: ['React', 'MUI', 'Django', 'Postgresql'],
-        githubUrl: "#"
+        githubUrl: "https://github.com/davidcarmo23/fisco-track"
     },
 ];
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ t }) => {
     return (
         <section id="projects" className="py-24 px-4 relative">
             <div className="container mx-auto max-w-5xl">
@@ -19,8 +19,7 @@ export const ProjectsSection = () => {
                     Featured <span className="text-primary"> Projects</span>
                 </h2>
                 <p className="text-center text-muted-foreground mb-12 maw-w-2xl mx-auto">
-                    Some of my recent projects. Each project was crafted with a defined use case,
-                    and with attention to detail, performance and user experience.
+                    {t("projects_intro")}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg-cols-3 gap-8">
                     {projects.map((project, key) => (
@@ -42,7 +41,7 @@ export const ProjectsSection = () => {
 
 
                                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                                <p className="text-muted-foreground text-sm mb-4">{t(project.description)}</p>
                                 <div className="flex justify-between items-center">
                                     <div className="flex space-x-3">
                                         <a aria-label={project.title} href={project.githubUrl} target="_blank" className="text-foreground/80 hover:text-secondary-icon transition-colors duration-300">
@@ -58,7 +57,7 @@ export const ProjectsSection = () => {
                     <a className="cosmic-button w-fit flex items-center mx-auto gap-2"
                         href="https://github.com/davidcarmo23"
                         target="_blank">
-                        My Github <ArrowRightIcon size={16} />
+                        {t("my_github")} <ArrowRightIcon size={16} />
                     </a>
                 </div>
             </div>
