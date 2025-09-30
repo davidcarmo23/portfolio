@@ -7,7 +7,14 @@ import i18n from "./i18n"
 
 function App() {
   useEffect(() => {
-    i18n.changeLanguage(navigator.language);
+    var userLang = localStorage.getItem("userLang");
+
+    if (userLang) {
+      i18n.changeLanguage(userLang);
+    } else {
+      i18n.changeLanguage(navigator.language);
+    }
+
   }, []);
 
   return (

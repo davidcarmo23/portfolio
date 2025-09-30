@@ -9,7 +9,8 @@ const navItems = [
     { name: "skills", href: "#skills" },
     { name: "projects", href: "#projects" },
     { name: "contact", href: "#contact" },
-]
+];
+
 export const NavBar = ({ t }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
