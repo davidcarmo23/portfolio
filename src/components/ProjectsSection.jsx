@@ -4,10 +4,18 @@ const projects = [
     {
         id: 1,
         title: "FiscoTrack",
-        description: "",
+        description: "Full-stack application designed to simplify financial management",
         image: "/projects/fiscotrack.png",
         tags: ['React', 'MUI', 'Django', 'Postgresql'],
         githubUrl: "https://github.com/davidcarmo23/fisco-track"
+    },
+    {
+        id: 2,
+        title: "EventTerra",
+        description: "EventTerra is a natural events mapping application",
+        image: "/projects/eventterra.png",
+        tags: ['React', 'TailwindCSS', 'Leaflet', 'NASA’s EONET API'],
+        githubUrl: "https://github.com/davidcarmo23/eventterra"
     },
 ];
 
