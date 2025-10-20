@@ -1,11 +1,9 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { PT, US } from 'country-flag-icons/react/3x2'
 
 export const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(true);
-    const [currentLang, setCurrentLang] = useState("en");
 
     useEffect(() => {
         const storedTheme = localStorage.getItem("theme");
@@ -17,13 +15,7 @@ export const ThemeToggle = () => {
             setIsDarkMode(false);
         }
 
-        setCurrentLang(localStorage.getItem("userLang"));
     }, [])
-
-    const handleLanguage = (lang) => {
-        localStorage.setItem("userLang", lang);
-        location.reload();
-    }
 
     const ToggleTheme = () => {
         if (isDarkMode) {
@@ -37,13 +29,7 @@ export const ThemeToggle = () => {
     }
 
     return (
-        <div className="fixed top-5 right-5 z-50 p-2 justify-between w-auto gap-4 flex flex-row">
-            <button aria-label="Theme Toggle" onClick={() => handleLanguage(currentLang === "pt" ? "en" : "pt")} className={cn("rounded-full transition-colors duration-300",
-                "focus:outline-hidden"
-            )}>
-                {currentLang == "pt" ? <PT width={24} /> : <US width={24} />}
-            </button>
-
+        <div className="fixed top-5 right-2 z-50 p-2 justify-between w-auto gap-4 flex flex-row">
             <button aria-label="Theme Toggle" onClick={ToggleTheme} className={cn("rounded-full transition-colors duration-300",
                 "focus:outline-hidden"
             )}>

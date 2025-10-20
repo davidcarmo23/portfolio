@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle} from "./LanguageToggle"
 
 const navItems = [
     { name: "home", href: "#home" },
@@ -37,21 +38,21 @@ export const NavBar = ({ t }) => {
                 </a>
 
                 {/* Desktop */}
-                <div className="hidden md:flex space-x-8">
+                <div className="hidden md:flex space-x-12">
                     {navItems.map((item, key) => (
                         <a key={key} href={item.href} className="text-foreground/80 hover:text-secondary-icon transition-colors duration-300">
                             {t(item.name)}
                         </a>
                     ))}
-
-                    <ThemeToggle />
                 </div>
+
                 {/* Mobile */}
                 <button onClick={() => setIsMenuOpen((prev) => !prev)}
-                    className="md:hidden p-2 mx-6 text-foreground z-50"
+                    className="md:hidden p-2 mx-12 text-foreground z-50"
                     aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
                 </button>
+                <LanguageToggle />
                 <ThemeToggle />
 
                 <div className={cn(
